@@ -1,0 +1,11 @@
+<template>
+    <h1>olá, mundo</h1>
+</template>
+
+<script setup>
+
+</script>
+
+<style>
+
+</style>

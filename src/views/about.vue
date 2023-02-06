@@ -1,8 +1,9 @@
 <template>
-    <h1>Está é o home</h1>
+  <h1>sobre</h1>
 </template>
 
 <script setup>
+
 
 </script>
 

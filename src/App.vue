@@ -1,4 +1,8 @@
-
+<template>
+    <p>teste</p>
+    <p>teste</p>
+    <p>teste</p>
+</template>
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'

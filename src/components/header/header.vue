@@ -1,9 +1,7 @@
 <template>
   <header>
     <nav>
-
       <div class="choose-category">
-
         <h1>devcommerce</h1>
         <ul>
           <li>
@@ -26,7 +24,6 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
-
 </script>
 
 

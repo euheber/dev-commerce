@@ -1,12 +1,17 @@
+// colors
 $primary-text-white: #FFF;
 $primary-text-black: #000000;
 $primary-text-link: #0000ff;
+// colors
 
+// fonts
 $anton: 'Anton', sans-serif;
 $PTSerif: 'PT Serif', serif;
 $ubuntu: 'Ubuntu', sans-serif;
+// fonts
 
 
+// mixins
 @mixin hoverAnimation { 
     &::after{
         position: absolute;
@@ -25,3 +30,4 @@ $ubuntu: 'Ubuntu', sans-serif;
         width: 100%;
       }
 }
+// mixins

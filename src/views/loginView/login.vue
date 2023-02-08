@@ -4,7 +4,6 @@
 
 <script setup>
 
-
 </script>
 
 <style scoped lang="scss" src="./login.scss"/>

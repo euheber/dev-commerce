@@ -7,10 +7,10 @@
         <h1>devcommerce</h1>
         <ul>
           <li>
-            About
+            <a href="">About</a>
           </li>
           <li>
-            Contact
+            <a href="">Contact</a>
           </li>
         </ul>
       </div>
@@ -18,7 +18,7 @@
       <div class="btns">
         <button class="btn">Sign in</button>
         <button class="btn">Sign up</button>
-        <button class="btn icon"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="icon"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
   </header>

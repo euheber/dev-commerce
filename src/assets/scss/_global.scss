@@ -5,3 +5,23 @@ $primary-text-link: #0000ff;
 $anton: 'Anton', sans-serif;
 $PTSerif: 'PT Serif', serif;
 $ubuntu: 'Ubuntu', sans-serif;
+
+
+@mixin hoverAnimation { 
+    &::after{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 0px;
+        background-color: black;
+        bottom: 0;
+        left: 0px;
+        border-radius: 5px;
+        transition: .5s ease;
+      }
+
+      &:hover::after{
+        height: 1px;
+        width: 100%;
+      }
+}

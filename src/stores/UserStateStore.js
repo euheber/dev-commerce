@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useUserStateStore = defineStore("user", {
+export const useUserStateStore = defineStore("userState", {
   //state
   state() {
     return {
@@ -9,14 +9,14 @@ export const useUserStateStore = defineStore("user", {
   },
   //actions
   actions: {
-    isConected() {
-      this.userConected = true;
+    isConected(length) {
+      this.userConected = length >= 8 ? true : false;
     },
   },
   // getters
   getters: {
     showStateUser() {
-      return this.userConected ? "User conected" : "User Not Conected";
+      return this.userConected ? "user conected" : "user not conected";
     },
   },
 });

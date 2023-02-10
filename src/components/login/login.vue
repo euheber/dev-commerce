@@ -10,11 +10,12 @@
                     <input id="email" type="email" required v-model="email" ref="input" />
                     <button @click="setEmail" type="submit">Continue</button>
                 </div>
-                <div v-if="userEmail.length > 0 & userPassoword.length === 0" class="warrapInput">
+                <div v-if="userEmail.length > 0" class="warrapInput">
                     <p><span>email</span>&#x0003A; {{ userEmail[0].email }}</p>
                     <label for="password">Password</label>
                     <input id="password" type="password" v-model="passoword" />
                     <button @click="setPassoword">Sign in</button>
+                    <p>{{ userState.showStateUser }}</p>
                 </div>
                 <p> By continuing, you agree to the <span>Online Shopping Store Terms of Use.</span></p>
 
@@ -32,6 +33,8 @@
 <script setup>
 
 import { ref, reactive } from 'vue';
+import { useUserStateStore } from '../../stores/UserStateStore';
+const userState = useUserStateStore();
 
 const email = ref(null);
 const passoword = ref(null);
@@ -41,9 +44,7 @@ const userPassoword = reactive([]);
 
 const input = ref(null);
 
-const validUser = {
-    online: false,
-};
+
 
 function setEmail() {
     if (input.value.checkValidity()) {
@@ -53,15 +54,31 @@ function setEmail() {
     }
 }
 function setPassoword() {
-    userPassoword.push({
-        email: passoword.value
-    })
-    
-    validUser.online = true;
-    console.log(validUser)
+    if (passoword.value !== '' && passoword.value !== null && passoword.value.length >= 8) {
+        userPassoword.push({
+            passoword: passoword.value
+        })
+    }
+    userState.isConected(passoword.value.length)
+
+
 }
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

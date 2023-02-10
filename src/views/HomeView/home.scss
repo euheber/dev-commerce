@@ -1,5 +1,15 @@
-main{ 
-    // border: 1px solid red;
-    max-width: 1400px;
-    margin: 6rem auto 0 auto;
+main {
+  // border: 1px solid red;
+  max-width: 1400px;
+  margin: 6rem auto 0 auto;
+  padding-bottom: 3rem;
+}
+
+.products {
+    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 25px;
 }

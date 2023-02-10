@@ -23,7 +23,6 @@ onMounted(async () => {
         .then(res => products.value = res)
 })
 
-console.log(products)
 
 </script>
 

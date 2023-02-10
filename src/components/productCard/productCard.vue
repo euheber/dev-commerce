@@ -1,31 +1,21 @@
 <template>
-  <div class="product">
-    <div class="product-img">
-      <img :src="product.image" alt="Produto">
-      <i class="fa-solid fa-cart-shopping"></i>
+  <div class="card">
+    <div class="image">
+      <img :src="product.image" alt="">
     </div>
-
-    <div class="product-info">
-      <h1>{{ product.title }}</h1>
-      <h2> {{ product.price }}</h2>
-      <p class="text">
-        {{ product.description }}
-      </p>
-    </div>
+    <h2 class="title"> {{ title }}</h2>
+    <span class="price">{{ price }}</span>
   </div>
 </template>
 
 <script setup>
 
-const props = defineProps({ 
+const props = defineProps({
   product: Object
 })
 
-
+const title = props.product.title.split(" ").slice(0, 3).join(" ")
+const price = props.product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) 
 </script>
-
-
-
-
 
 <style lang="scss" scoped src="./productCard.scss" />

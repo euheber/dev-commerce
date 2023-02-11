@@ -14,7 +14,7 @@
       </div>
 
       <div class="btns">
-        <button class="btn">Sign in</button>
+        <button class="btn"><RouterLink to="/login">Sign in</RouterLink></button>
         <button class="btn">Sign up</button>
         <button class="icon"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>

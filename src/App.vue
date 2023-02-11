@@ -1,6 +1,5 @@
 <template>
     <Header />
-    <Login />
     <RouterView></RouterView>
 </template>
 

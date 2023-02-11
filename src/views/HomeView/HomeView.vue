@@ -3,10 +3,12 @@
         <section>
             <h1>Carrosel</h1>
         </section>
-        <button @click="handleApi('celular')">celular</button>
-        <button @click="handleApi('electrnoc')">celular</button>
+        <button @click="handleApi(men)">Homem</button>
+        <button @click="handleApi(women)">Mulher</button>
+        <button @click="handleApi(jewelery)">Jóias</button>
+        <button @click="handleApi(electronics)">Eletrônicos</button>
         <section class="products">
-            <productCard v-for="product in products" :key="product.key" :product="product" class="teste"/>
+            <productCard v-for="product in products" :key="product.key" :product="product" class="teste" />
         </section>
     </main>
 </template>
@@ -34,11 +36,13 @@ onMounted(async () => {
 
 const men = [];
 const women = [];
-const jewelry = [];
+const jewelery = [];
 const electronics = [];
 
-const handleApi = () => { 
-    products.value = men
+const handleApi = (category) => {
+
+    if(!category){ console.log('ta vazio')}
+    products.value = category
 }
 
 function separateProducts(products) {
@@ -50,8 +54,8 @@ function separateProducts(products) {
             case "electronics":
                 electronics.push(product);
                 break;
-            case "jewelry":
-                jewelry.push(product);
+            case "jewelery":
+                jewelery.push(product);
                 break;
             case "women's clothing":
                 women.push(product);
@@ -65,9 +69,6 @@ function separateProducts(products) {
 
 
 </script>
-
-
-
 
 
 <style lang="scss" scoped src="./home.scss"/>

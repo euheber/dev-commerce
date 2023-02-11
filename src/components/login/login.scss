@@ -34,7 +34,16 @@
           font-weight: 700;
           text-transform: capitalize;
         }
+        a{
+          font-weight: 700;
+          color: rgb(29, 79, 242);
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       }
+
       label {
         font-size: 1.125rem;
         font-weight: 700;

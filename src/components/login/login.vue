@@ -5,18 +5,27 @@
             <form class="login" @submit.prevent>
 
                 <h2>Sign in</h2>
-                <div v-if="userEmail.length === 0" class="warrapInput">
+
+                <div class="warrapInput" v-if="changeInput">
+
                     <label for="email">E-mail</label>
-                    <input id="email" type="email" required v-model="email" ref="input" />
+                    <input id="email" type="email" required v-model="email" />
                     <button @click="setEmail" type="submit">Continue</button>
+
                 </div>
-                <div v-if="userEmail.length > 0" class="warrapInput">
-                    <p><span>email</span>&#x0003A; {{ userEmail[0].email }}</p>
-                    <label for="password">Password</label>
-                    <input id="password" type="password" v-model="passoword" />
-                    <button @click="setPassoword">Sign in</button>
-                    <p>{{ userState.showStateUser }}</p>
+
+                <div v-if="!changeInput" class="warrapInput">
+
+                    <p><span>email</span>&#x0003A; {{ email }} <a @click="changeEmail">change</a></p>
+
+                    <label for="passwordID">Password</label>
+                    <input id="passwordID" type="password" v-model="password" />
+                    <button @click="setPassword">Sign in</button>
+                    <p >{{ userState.ERROR }}</p>
+                    <p >{{ userState.SHOW_STATE_USER }}</p>
+
                 </div>
+
                 <p> By continuing, you agree to the <span>Online Shopping Store Terms of Use.</span></p>
 
                 <details>
@@ -32,38 +41,47 @@
 </template>
 <script setup>
 
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
 import { useUserStateStore } from '../../stores/UserStateStore';
 const userState = useUserStateStore();
 
 const email = ref(null);
-const passoword = ref(null);
+const password = ref(null);
 
-const userEmail = reactive([]);
-const userPassoword = reactive([]);
-
-const input = ref(null);
-
-
+const changeInput = ref(true);
 
 function setEmail() {
-    if (input.value.checkValidity()) {
-        userEmail.push({
-            email: email.value
-        })
+    const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    if (email.value !== null && email.value.match(regex)) {
+        changeInput.value = false;
     }
 }
-function setPassoword() {
-    if (passoword.value !== '' && passoword.value !== null && passoword.value.length >= 8) {
-        userPassoword.push({
-            passoword: passoword.value
-        })
-    }
-    userState.isConected(passoword.value.length)
 
-
+function setPassword() {
+    userState.LOGIN(password.value);
 }
+function changeEmail() {
+    changeInput.value = true;
+    email.value = ''
+}
+
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style scoped lang="scss" src="./login.scss" />

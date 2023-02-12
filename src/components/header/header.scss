@@ -4,7 +4,7 @@
 header {
   padding: 2rem;
   border-bottom: 1px solid #023047;
-  background-color: #ffb703;
+  background-color: $primary
 }
 
 nav {
@@ -17,6 +17,7 @@ nav {
   .btns {
     display: flex;
     gap: 1rem;
+    align-items: center;
 
     .page-link{ 
       text-decoration: none;

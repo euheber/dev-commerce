@@ -16,8 +16,13 @@
       </div>
 
       <div class="btns">
-        <button class="btn"><RouterLink to="/login" class="page-link">Sign in</RouterLink></button>
-        <button class="btn">Sign up</button>
+        <div v-if="!userState.userConected">
+          <button class="btn">
+            <RouterLink to="/login" class="page-link">Sign in</RouterLink>
+          </button>
+          <button class="btn">Sign up</button>
+        </div>
+        <UserIcon v-if="userState.userConected"/>
         <button class="icon"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
@@ -26,7 +31,22 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import { useUserStateStore } from '../../stores/UserStateStore';
+import UserIcon from '../../assets/SVG/UserIcon.vue'
+
+const userState = useUserStateStore();
+
+const storedUserState = localStorage.getItem("userSate");
+
+if (storedUserState) {
+  userState.LOGIN(8);
+}
+
 </script>
+
+
+
+
 
 
 

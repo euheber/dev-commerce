@@ -1,7 +1,7 @@
 @import "../../assets/scss/global";
 
 .containerLogin {
-  max-width: 1440px;
+  max-width: 1300px;
   margin: 0 auto;
   height: 700px;
   display: flex;
@@ -11,9 +11,12 @@
     background-color: gray;
     border-radius: 10px;
     padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
   }
   .login {
-    height: 400px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -36,7 +39,7 @@
         }
         a {
           font-weight: 700;
-          color: rgb(29, 79, 242);
+          color: $primary;
           cursor: pointer;
           &:hover {
             text-decoration: underline;
@@ -59,7 +62,7 @@
 
         &:focus {
           appearance: auto;
-          border: 2px solid blue;
+          border: 2px solid $primary;
         }
       }
       button {
@@ -69,9 +72,9 @@
         cursor: pointer;
         font-size: 1rem;
         font-weight: 600;
-        transition: background 0.4s ease-in-out;
+        transition: all 0.3s ease-in-out;
         &:hover {
-          background-color: black;
+          background-color: $primary;;
           color: white;
         }
       }
@@ -81,7 +84,7 @@
         color: $primary-text-link;
         &:hover {
           text-decoration: underline;
-          color: chocolate;
+          color: $primary;
           cursor: pointer;
         }
       }
@@ -93,7 +96,7 @@
         margin-bottom: 5px;
         &:hover {
           text-decoration: underline;
-          color: chocolate;
+          color: $primary;
         }
       }
       p {
@@ -102,7 +105,7 @@
         margin-bottom: 5px;
         &:hover {
           text-decoration: underline;
-          color: chocolate;
+          color: $primary;
         }
       }
     }

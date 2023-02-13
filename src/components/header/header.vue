@@ -26,13 +26,14 @@
         <button class="icon"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
+    <!-- <shopCart /> -->
   </header>
 </template>
-
 <script setup>
 import { RouterLink } from 'vue-router';
 import { useUserStateStore } from '../../stores/UserStateStore';
 import UserIcon from '../../assets/SVG/UserIcon.vue'
+import shopCart from '../shopcart/shopcart.vue'
 
 const userState = useUserStateStore();
 

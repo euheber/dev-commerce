@@ -1,0 +1,43 @@
+@import "@/assets/scss/global";
+
+.product{
+    width: 450px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    background-color: #648de5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.price-img {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.img{ 
+    // border: 1px solid black;
+    width: 100px;
+    height: 80px;
+    text-align: center;
+}
+
+.price{
+    h2,span{
+        font-family: $ubuntu;
+    }
+    span{
+        font-size: .8rem;
+    }
+}
+
+
+.remove-btn{ 
+    background-color: transparent;
+    height: 25px;
+    border: none;
+    font-size: 1.5rem;
+}

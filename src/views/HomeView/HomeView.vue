@@ -1,15 +1,18 @@
 <template>
     <main>
-        <section>
-            <h1>Carrosel</h1>
-        </section>
-        <button @click="handleApi(men)">Homem</button>
-        <button @click="handleApi(women)">Mulher</button>
-        <button @click="handleApi(jewelery)">Jóias</button>
-        <button @click="handleApi(electronics)">Eletrônicos</button>
-        <section class="products">
-            <productCard v-for="product in products" :key="product.key" :product="product" class="teste" />
-        </section>
+        <div class="btns">
+            <button @click="handleProductDisplay(`clothing`, $event)" class="filterBtn">Homem</button>
+            <button @click="handleProductDisplay('jewelery', $event)" class="filterBtn">Jóias</button>
+            <button @click="handleProductDisplay('electronics', $event)" class="filterBtn">Eletrônicos</button>
+        </div>
+
+        
+            <section class="products">
+                <productCard v-for="product in products" :key="product.key" :product="product"
+                    :class="product.category" />
+            </section>
+
+
     </main>
 </template>
 
@@ -19,6 +22,7 @@ import productCard from '../../components/productCard/productCard.vue';
 import { ref } from 'vue';
 
 let products = ref('')
+let handleDisplay = ref('')
 
 onMounted(async () => {
     fetch("https://fakestoreapi.com/products")
@@ -39,11 +43,24 @@ const women = [];
 const jewelery = [];
 const electronics = [];
 
-const handleApi = (category) => {
+// const handleApi = category => products.value = category
 
-    if(!category){ console.log('ta vazio')}
-    products.value = category
+const handleProductDisplay = (category) => {
+    // handleDisplay.value = category
+    const todasClasses = document.querySelectorAll(`.card`)
+    todasClasses.forEach((item) => {
+        if (item.classList.contains(category)) {
+            item.classList.add('active')
+            item.classList.remove('of')
+        } else {
+            item.classList.remove('active')
+            item.classList.add('of')
+        }
+
+
+    })
 }
+
 
 function separateProducts(products) {
     products.forEach(product => {
@@ -69,6 +86,12 @@ function separateProducts(products) {
 
 
 </script>
+
+
+
+
+
+
 
 
 <style lang="scss" scoped src="./home.scss"/>

@@ -8,13 +8,20 @@
         </section>
 
         <section class="products-list">
-            <productsInCart />
+            <productsInCart v-for="cartShop in userShopCart.cartShop" :key="cartShop.id" :cartShop="cartShop" />
         </section>
     </aside>
 </template>
 
 <script setup>
-   import productsInCart from '../productsInCart/productsInCart.vue';
+import productsInCart from '../productsInCart/productsInCart.vue';
+import { userShopCart } from '@/stores/UserCartStore'
+
+
 </script>
+
+
+
+
 
 <style scoped lang="scss" src="./shopcart.scss" />

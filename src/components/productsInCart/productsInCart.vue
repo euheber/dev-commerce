@@ -2,12 +2,12 @@
   <div class="product">
     <div class="price-img">
             <div class="img">
-                img vai aqui
+               <span>teste</span>
             </div>
 
             <div class="price">
-                <h2>titulo do produto</h2>
-                <span>preço: 999</span>
+                <h2>{{ cartShop.title }}</h2>
+                <span>{{ cartShop.price }}</span>
             </div>
     </div>
 
@@ -16,6 +16,11 @@
 </template>
 
 <script setup>
+const props = defineProps({ 
+  cartShop: Object
+})
+
+
 
 </script>
 

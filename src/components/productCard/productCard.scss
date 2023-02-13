@@ -18,22 +18,22 @@
   gap: 1rem;
 }
 
-.card::after {
-  content: "Add to Cart";
-  padding-top: 1.25em;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  bottom: -70px;
-  background: #ffb703;
-  color: black;
-  height: 3rem;
-  width: 100%;
-  transition: all 80ms;
-  font-weight: 600;
-  text-transform: uppercase;
-  position: absolute;
-}
+// .card::after {
+//   content: "Add to Cart";
+//   padding-top: 1.25em;
+//   text-align: center;
+//   position: absolute;
+//   left: 0;
+//   bottom: -70px;
+//   background: #ffb703;
+//   color: black;
+//   height: 3rem;
+//   width: 100%;
+//   transition: all 80ms;
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   position: absolute;
+// }
 
 .card .title {
   font-family: $ubuntu;
@@ -52,14 +52,6 @@
   bottom: 0;
 }
 
-.card:active {
-  transform: scale(0.98);
-}
-
-.card:active::after {
-  content: "Added !";
-  height: 3.125em;
-}
 
 .text {
   max-width: 55px;

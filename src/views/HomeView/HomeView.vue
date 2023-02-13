@@ -1,14 +1,14 @@
 <template>
     <main>
         <div class="btns">
-            <button @click="handleProductDisplay(`clothing`, $event)" class="filterBtn">Homem</button>
-            <button @click="handleProductDisplay('jewelery', $event)" class="filterBtn">Jóias</button>
-            <button @click="handleProductDisplay('electronics', $event)" class="filterBtn">Eletrônicos</button>
+            <button @click="handleProductDisplay(`clothing`)" class="filterBtn">Roupas</button>
+            <button @click="handleProductDisplay('jewelery')" class="filterBtn">Jóias</button>
+            <button @click="handleProductDisplay('electronics')" class="filterBtn">Eletrônicos</button>
         </div>
 
         
             <section class="products">
-                <productCard v-for="product in products" :key="product.key" :product="product"
+                <productCard v-for="product in products" :key="product.id" :product="product"
                     :class="product.category" />
             </section>
 

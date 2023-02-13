@@ -6,11 +6,9 @@
     </svg>
 </template>
 <style lang="scss">
+
 .userIcon {
-    >svg {
         width: 35px;
         cursor: pointer;
-    }
-
 }
 </style>

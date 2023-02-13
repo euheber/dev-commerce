@@ -9,10 +9,8 @@
         
             <section class="products">
                 <productCard v-for="product in products" :key="product.id" :product="product"
-                    :class="product.category" />
+                    :class="product.category.replace(`'`, '')" />
             </section>
-
-
     </main>
 </template>
 

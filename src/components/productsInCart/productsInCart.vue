@@ -2,12 +2,12 @@
   <div class="product">
     <div class="price-img">
             <div class="img">
-               <span>teste</span>
+               <img :src="product.image" alt="">
             </div>
 
             <div class="price">
-                <h2>{{ cartShop.title }}</h2>
-                <span>{{ cartShop.price }}</span>
+                <h2>{{ product.title }}</h2>
+                <span>{{ product.price }}</span>
             </div>
     </div>
 
@@ -16,12 +16,12 @@
 </template>
 
 <script setup>
-const props = defineProps({ 
-  cartShop: Object
+import { userShopCart } from '../../stores/UserCartStore';
+
+
+const props = defineProps({
+  product: Object
 })
-
-
-
 </script>
 
 <style scoped lang="scss" src="./productsInCart.scss" />

@@ -47,12 +47,20 @@
 import { ref } from 'vue';
 import { useUserStateStore } from '../../stores/UserStateStore';
 import BackgroundLogin from '../../assets/SVG/BackgroundLogin.vue';
+import { onMounted } from 'vue';
+import router from '../../router';
 const userState = useUserStateStore();
 
 const email = ref(null);
 const password = ref(null);
 
 const changeInput = ref(true);
+
+onMounted(() => {
+  if (userState.userConected) {
+    router.push({ path: '/' })
+  }
+})
 
 function setEmail() {
   const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -72,6 +80,8 @@ function changeEmail() {
 
 
 </script>
+
+
 
 
 

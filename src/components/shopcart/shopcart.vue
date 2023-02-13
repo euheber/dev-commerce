@@ -8,15 +8,16 @@
         </section>
 
         <section class="products-list">
-            <productsInCart v-for="cartShop in userShopCart.cartShop" :key="cartShop.id" :cartShop="cartShop" />
+            <productsInCart v-for="product in chamarFunction.cartShop" :key="product.id"  :product="product"/>
         </section>
     </aside>
 </template>
 
 <script setup>
 import productsInCart from '../productsInCart/productsInCart.vue';
-import { userShopCart } from '@/stores/UserCartStore'
+import { userShopCart } from '../../stores/UserCartStore';
 
+const chamarFunction = userShopCart()
 
 </script>
 

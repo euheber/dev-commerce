@@ -20,9 +20,12 @@
           <button class="btn">
             <RouterLink to="/login" class="page-link">Sign in</RouterLink>
           </button>
-          <button class="btn">Sign up</button>
+
+          <button class="btn">
+            <RouterLink to="/signup" class="page-link">Sign up</RouterLink>
+          </button>
         </div>
-        <MenuButton v-if="userState.userConected"/>
+        <MenuButton v-if="userState.userConected" />
         <button class="icon" v-if="!userState.userConected"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
@@ -31,6 +34,7 @@
 </template>
 <script setup>
 import { RouterLink } from 'vue-router';
+import { onMounted } from 'vue';
 import shopCart from '../shopcart/shopcart.vue'
 import MenuButton from '../menuButton/menuButton.vue';
 import { useUserStateStore } from '../../stores/UserStateStore';
@@ -39,11 +43,21 @@ const userState = useUserStateStore();
 
 const storedUserState = localStorage.getItem("userSate");
 
-if (storedUserState) {
-  userState.LOGIN(8);
-}
+onMounted(() => {
+  if (storedUserState === 'true') {
+    userState.LOGIN();
+  }
+})
 
 </script>
+
+
+
+
+
+
+
+
 
 
 

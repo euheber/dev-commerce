@@ -7,7 +7,7 @@
         </h1>
         <ul>
           <li>
-            <a href="">About</a>
+            <RouterLink to="/about" class="page-link">About</RouterLink>
           </li>
           <li>
             <a href="">Contact</a>

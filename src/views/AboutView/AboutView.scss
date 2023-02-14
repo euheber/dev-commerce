@@ -1,0 +1,24 @@
+@import "../../assets/scss/global";
+.aboutContainer {
+  max-width: 1300px;
+  margin: 20px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  align-items: center;
+  background-color: $primary;
+  border-radius: 20px;
+  padding: 20px;
+}
+.about {
+  padding: 20px;
+  font-family: $ubuntu;
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

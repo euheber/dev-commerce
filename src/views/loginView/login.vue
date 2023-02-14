@@ -72,6 +72,9 @@ function setEmail() {
 function setPassword() {
   userState.LOGIN(password.value.length);
   localStorage.setItem("userSate", userState.userConected);
+  if (userState.userConected) {
+    router.push({ path: '/' })
+  }
 }
 function changeEmail() {
   changeInput.value = true;
@@ -80,6 +83,8 @@ function changeEmail() {
 
 
 </script>
+
+
 
 
 

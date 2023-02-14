@@ -22,8 +22,8 @@
           </button>
           <button class="btn">Sign up</button>
         </div>
-        <UserIcon v-if="userState.userConected"/>
-        <button class="icon"><i class="fa-solid fa-cart-shopping"></i></button>
+        <MenuButton v-if="userState.userConected"/>
+        <button class="icon" v-if="!userState.userConected"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
     <!-- <shopCart /> -->
@@ -31,9 +31,9 @@
 </template>
 <script setup>
 import { RouterLink } from 'vue-router';
-import { useUserStateStore } from '../../stores/UserStateStore';
-import UserIcon from '../../assets/SVG/UserIcon.vue'
 import shopCart from '../shopcart/shopcart.vue'
+import MenuButton from '../menuButton/menuButton.vue';
+import { useUserStateStore } from '../../stores/UserStateStore';
 
 const userState = useUserStateStore();
 
@@ -44,6 +44,12 @@ if (storedUserState) {
 }
 
 </script>
+
+
+
+
+
+
 
 
 

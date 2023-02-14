@@ -53,6 +53,7 @@ function Toggle() {
 }
 function LogoutAccount() {
     LOGOUT()
+    cartShop.length = 0;
     localStorage.setItem("userSate", false);
 }
 

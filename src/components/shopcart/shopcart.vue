@@ -21,8 +21,4 @@ const chamarFunction = userShopCart()
 
 </script>
 
-
-
-
-
 <style scoped lang="scss" src="./shopcart.scss" />

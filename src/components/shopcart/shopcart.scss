@@ -21,13 +21,16 @@ aside{
         h2{ 
             font-size: 1.5rem;
             font-family: $anton;
+            cursor: pointer;
         }
     }
 }
 
 .products-list{ 
     margin-top: 3rem;
-    min-height: 550px;
+    height: 550px;
     padding: 1rem;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 

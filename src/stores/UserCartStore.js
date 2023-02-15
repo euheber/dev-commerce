@@ -2,13 +2,19 @@ import { defineStore } from "pinia"
 
 export const userShopCart = defineStore("counter", {
   state: () => {
-    return { cartShop: [] }
+    return { cartShop: [],
+    total: 0 
+  }
   },
-
   actions: {
     pushObject(produto) {
       this.cartShop.push(produto)
-      console.log(this.cartShop)
+      this.total +=  produto.price     
     },
+    removeProduct(product){ 
+      const positionOfProduct = this.cartShop.indexOf(product)
+      this.cartShop.splice(positionOfProduct, 1)
+      this.total -= product.price
+    }
   },
 })

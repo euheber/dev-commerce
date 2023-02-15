@@ -29,7 +29,7 @@
         <button class="icon" v-if="!userState.userConected"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
-    <!-- <shopCart /> -->
+    <shopCart />
   </header>
 </template>
 <script setup>

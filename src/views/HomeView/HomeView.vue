@@ -7,7 +7,6 @@
             <button @click="handleProductDisplay('electronics')" class="filterBtn">Eletrônicos</button>
         </div>
 
-
         <section class="products">
             <productCard v-for="product in products" :key="product.id" :product="product"
                 :class="product.category.replace(`'`, '')" />
@@ -28,7 +27,6 @@ onMounted(async () => {
         .then(product => products.value = product)
 })
 
-
 const handleProductDisplay = (category) => {
     const allCards = document.querySelectorAll(`.card`)
     allCards.forEach((item) => {
@@ -39,14 +37,4 @@ const handleProductDisplay = (category) => {
 }
 
 </script>
-
-
-
-
-
-
-
-
-
-
 <style lang="scss" scoped src="./home.scss"/>

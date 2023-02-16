@@ -26,15 +26,15 @@
           </button>
         </div>
         <MenuButton v-if="userState.userConected" />
-        <button class="icon" v-if="!userState.userConected"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="icon" @click="callChildFunction"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
-    <shopCart />
+    <shopCart ref="openCartShop" />
   </header>
 </template>
 <script setup>
 import { RouterLink } from 'vue-router';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import shopCart from '../shopcart/shopcart.vue'
 import MenuButton from '../menuButton/menuButton.vue';
 import { useUserStateStore } from '../../stores/UserStateStore';
@@ -43,6 +43,14 @@ const userState = useUserStateStore();
 
 const storedUserState = localStorage.getItem("userSate");
 
+
+
+const openCartShop = ref()
+
+const callChildFunction = () => { 
+  openCartShop.value.handleCartshopFunction()
+}
+
 onMounted(() => {
   if (storedUserState === 'true') {
     userState.LOGIN();
@@ -50,6 +58,12 @@ onMounted(() => {
 })
 
 </script>
+
+
+
+
+
+
 
 
 

@@ -9,6 +9,5 @@
 <style lang="scss">
 .ShoppingCart {
     width: 35px;
-    margin: 10px;
 }
 </style>

@@ -1,7 +1,5 @@
 @import "../../assets/scss/global";
 .aboutContainer {
-  max-width: 1300px;
-  margin: 20px auto 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
 
@@ -9,6 +7,8 @@
   background-color: $primary;
   border-radius: 20px;
   padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .about {
   padding: 20px;

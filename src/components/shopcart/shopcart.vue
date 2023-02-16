@@ -16,7 +16,7 @@
         <span v-if="signIn">You must be loged in to buy it</span> <br>
 
         <span v-if="done">Done!</span>
-
+        <span v-if="emptyCartShop">Seu carrinho está vazio</span>
         <button @click="buyNow" class="checkInBtn">Buy now <i class="fa-solid fa-basket-shopping"></i></button>
     </aside>
 </template>
@@ -34,7 +34,7 @@ const body = document.querySelector('body')
 let handleCartshop = ref(true)
 let signIn = ref(false)
 let done = ref(false)
-
+let emptyCartShop = ref(false)
 
 const handleCartshopFunction = () => {
     handleCartshop.value = !handleCartshop.value
@@ -42,13 +42,22 @@ const handleCartshopFunction = () => {
 }
 
 const buyNow = () => {
+    if (userState.userConected & chamarFunction.cartShop.length === 0) {
+        emptyCartShop.value = !emptyCartShop.value
+        setTimeout(() => {
+            emptyCartShop.value = !emptyCartShop.value
+        }, 2000)
+        return
+    }
+
+
     if (userState.userConected) {
         done.value = !done.value
         setTimeout(() => {
             done.value = !done.value
         }, 2000)
         chamarFunction.clean()
-        return       
+        return
     }
 
     signIn.value = !signIn.value

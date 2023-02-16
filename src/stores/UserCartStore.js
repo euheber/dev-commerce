@@ -26,6 +26,10 @@ export const userShopCart = defineStore("counter", {
       if(product.quantity <= 1) this.cartShop.splice(positionOfProduct, 1)
       product.quantity--
       this.total -= product.price
+    },
+    clean(){ 
+      this.total = 0
+      this.cartShop = []
     }
   },
 })

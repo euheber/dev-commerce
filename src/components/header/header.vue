@@ -45,8 +45,6 @@ const userState = useUserStateStore();
 const storedUserState = localStorage.getItem("userSate");
 const openCartShop = ref()
 
-const callModal = () => {}
-
 const notificationIcon = ref(false);
 
 
@@ -57,7 +55,7 @@ watch(cartShop, (newValue) => {
 
 
 
-const callChildFunction = () => {
+const callModal = () => {
   openCartShop.value.handleCartshopFunction()
 }
 

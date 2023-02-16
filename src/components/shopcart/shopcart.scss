@@ -1,36 +1,50 @@
-@import '../../assets/scss/global';
+@import "../../assets/scss/global";
 
-
-
-aside{ 
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 30%;
-    height: 100%;
-    z-index: 99;
-    background-color: $primary;
+aside {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 99;
+  background-color: $primary;
 }
 
-.cart-header{ 
-    padding-block: 2rem;
-    padding-inline: 2rem;
-    display: flex;
-    justify-content: space-between;
-    .price-box{ 
-        h2{ 
-            font-size: 1.5rem;
-            font-family: $anton;
-            cursor: pointer;
-        }
+.cart-header {
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  .price-box {
+    h2 {
+      font-size: 1.5rem;
+      font-family: $anton;
     }
+  }
 }
 
-.products-list{ 
-    margin-top: 3rem;
-    height: 550px;
-    padding: 1rem;
-    overflow: scroll;
-    overflow-x: hidden;
+.products-list {
+  margin: 3rem auto 0 auto;
+  height: 550px;
+  width: 450px;
+  padding: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+ border-radius: 7px;
+
+ &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-text-black; 
+    border-radius: 10px;
+  }
 }
 
+.checkInBtn{
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
+}

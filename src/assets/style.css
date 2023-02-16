@@ -80,6 +80,15 @@ body {
   background-color: #212121;
 }
 
+body::-webkit-scrollbar {
+   width: 2px;
+ }
+
+ body::-webkit-scrollbar-thumb {
+   background: #ffb703; 
+   border-radius: 10px;
+ }
+
 ol,
 ul {
   list-style: none;

@@ -8,7 +8,8 @@
             <div class="price">
                 <h2>{{ product.title.split(" ").slice(0, 3).join(" ") }}</h2>
                 <span>{{ product.price }}</span> <br>
-                <span>Quantidade:{{ product.quantity }}</span> <button @click="removeQuantity.removeQuantityFromProduct(product)">V</button>
+                <span>Quantidade:{{ product.quantity }}</span> 
+                <button @click="removeQuantity.removeQuantityFromProduct(product)" class="icon"><i class="fa-solid fa-chevron-down"></i></button>
             </div>
     </div>
 

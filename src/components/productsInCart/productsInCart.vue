@@ -7,7 +7,8 @@
 
             <div class="price">
                 <h2>{{ product.title.split(" ").slice(0, 3).join(" ") }}</h2>
-                <span>{{ product.price }}</span>
+                <span>{{ product.price }}</span> <br>
+                <span>Quantidade:{{ product.quantity }}</span> <button @click="removeQuantity.removeQuantityFromProduct(product)">V</button>
             </div>
     </div>
 
@@ -20,6 +21,7 @@ import { userShopCart } from '../../stores/UserCartStore';
 
 
 const removeAction = userShopCart()
+const removeQuantity = userShopCart()
 
 const props = defineProps({
   product: Object

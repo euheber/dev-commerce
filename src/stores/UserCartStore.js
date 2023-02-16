@@ -5,16 +5,27 @@ export const userShopCart = defineStore("counter", {
     return { cartShop: [], total: 0 }
   },
   actions: {
-    pushObject(produto) {
-      this.cartShop.push(produto)
-      this.total += produto.price
+    pushObject(product) {
+      const itemIndex = this.cartShop.findIndex((i) => i.id === product.id)
+      if (itemIndex === -1) {
+        this.cartShop.push({ ...product, quantity: 1 })
+        this.total += product.price
+       
+      } else {
+        this.cartShop[itemIndex].quantity++
+        this.total += product.price
+      }
     },
     removeProduct(product) {
       const positionOfProduct = this.cartShop.indexOf(product)
       this.cartShop.splice(positionOfProduct, 1)
-      console.log(this.total)
-      this.total -= product.price
-      console.log(this.total)
+      this.total -= product.price * product.quantity
     },
+    removeQuantityFromProduct(product){
+      const positionOfProduct = this.cartShop.indexOf(product)
+      if(product.quantity <= 1) this.cartShop.splice(positionOfProduct, 1)
+      product.quantity--
+      this.total -= product.price
+    }
   },
 })

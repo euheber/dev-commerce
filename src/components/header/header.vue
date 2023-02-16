@@ -26,7 +26,7 @@
           </button>
         </div>
         <MenuButton v-if="userState.userConected" />
-        <button class="icon" @click="callChildFunction"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="icon" @click="callModal"><i class="fa-solid fa-cart-shopping"></i></button>
       </div>
     </nav>
     <shopCart ref="openCartShop" />
@@ -40,14 +40,10 @@ import MenuButton from '../menuButton/menuButton.vue';
 import { useUserStateStore } from '../../stores/UserStateStore';
 
 const userState = useUserStateStore();
-
 const storedUserState = localStorage.getItem("userSate");
-
-
-
 const openCartShop = ref()
 
-const callChildFunction = () => { 
+const callModal = () => {
   openCartShop.value.handleCartshopFunction()
 }
 
@@ -58,6 +54,10 @@ onMounted(() => {
 })
 
 </script>
+
+
+
+
 
 
 

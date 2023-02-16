@@ -1,7 +1,7 @@
 <template>
-  <section class="containerLogin">
+  <section>
 
-    <div class="warrap">
+    <div class="warrap container">
       <div>
         <BackgroundLogin />
       </div>

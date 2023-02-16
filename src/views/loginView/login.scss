@@ -1,12 +1,10 @@
 @import "../../assets/scss/global";
 .warrap {
-  max-width: 1300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
   padding: 20px;
-  margin: 0 auto;
   font-family: $ubuntu;
 }
 

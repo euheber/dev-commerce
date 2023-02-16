@@ -1,20 +1,24 @@
 <template>
     <main>
-        <div class="btns">
-            <button @click="handleProductDisplay('mens')" class="filterBtn">Homem</button>
-            <button @click="handleProductDisplay('womens')" class="filterBtn">Mulher</button>
-            <button @click="handleProductDisplay('jewelery')" class="filterBtn">Jóias</button>
-            <button @click="handleProductDisplay('electronics')" class="filterBtn">Eletrônicos</button>
+        <div class="container">
+            <div class="btns">
+                <button @click="handleProductDisplay('mens')" class="filterBtn">Homem</button>
+                <button @click="handleProductDisplay('womens')" class="filterBtn">Mulher</button>
+                <button @click="handleProductDisplay('jewelery')" class="filterBtn">Jóias</button>
+                <button @click="handleProductDisplay('electronics')" class="filterBtn">Eletrônicos</button>
+            </div>
+
+            <section class="products">
+                <productCard v-for="product in products" :key="product.id" :product="product"
+                    :class="product.category.replace(`'`, '')" />
+            </section>
         </div>
 
-        <section class="products">
-            <productCard v-for="product in products" :key="product.id" :product="product"
-                :class="product.category.replace(`'`, '')" />
-        </section>
-    </main>
+</main>
 </template>
 
 <script setup>
+
 import { onMounted } from 'vue';
 import productCard from '../../components/productCard/productCard.vue';
 import { ref } from 'vue';
@@ -31,7 +35,7 @@ const handleProductDisplay = (category) => {
     const allCards = document.querySelectorAll(`.card`)
     allCards.forEach((item) => {
 
-     const showProduct = item.classList.contains(category)
+        const showProduct = item.classList.contains(category)
         item.style.display = showProduct ? 'block' : 'none'
     })
 }

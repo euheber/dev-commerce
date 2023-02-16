@@ -30,4 +30,8 @@ $ubuntu: "Ubuntu", sans-serif;
     width: 100%;
   }
 }
-// mixins
+// container class
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}

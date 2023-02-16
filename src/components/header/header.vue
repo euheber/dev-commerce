@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav>
+    <nav class="container">
       <div class="choose-category">
         <h1>
           <RouterLink to="/">devcommerce</RouterLink>
@@ -34,9 +34,9 @@
     </nav>
     <shopCart ref="openCartShop" />
 </header>
-
 </template>
 <script setup>
+
 
 import ShoppingCart from '../../assets/SVG/ShoppingCart.vue'
 import { RouterLink } from 'vue-router';
@@ -68,7 +68,7 @@ onMounted(() => {
   if (storedUserState === 'true') {
     userState.LOGIN();
   }
-  if (cartShop.length > 0 ) {
+  if (cartShop.length > 0) {
     notificationIcon.value = localStorage.getItem("notification") === "true";
   }
 })

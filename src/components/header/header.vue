@@ -10,7 +10,7 @@
             <RouterLink to="/about">About</RouterLink>
           </li>
           <li>
-            <a href="">Contact</a>
+            <RouterLink to="/contact">Contact</RouterLink>
           </li>
         </ul>
       </div>

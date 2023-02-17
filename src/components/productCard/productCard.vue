@@ -7,7 +7,7 @@
       <span class="price">{{ price }}</span>
 
       <button @click="pushAction.pushObject(product)">Pegar produto</button>
-      <RouterLink :to="`/product/${product.id}`" >Pagina do produto</RouterLink>
+      <RouterLink :to="`/product/${product.id}`">Pagina do produto</RouterLink>
     </div>
 </template>
 

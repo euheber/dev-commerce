@@ -35,7 +35,11 @@ const router = createRouter({
       name: "contact",
       component: ContactView,
     },
-    { path: "/product/:id", name: "product", component: product },
+    { 
+      path: "/product/:id", 
+      name: "product", 
+      component: product 
+    },
   ],
 })
 

@@ -31,7 +31,7 @@ const userState = useUserStateStore()
 const chamarFunction = userShopCart()
 const body = document.querySelector('body')
 
-let handleCartshop = ref(true)
+let handleCartshop = ref(false)
 let signIn = ref(false)
 let done = ref(false)
 let emptyCartShop = ref(false)
@@ -49,7 +49,6 @@ const buyNow = () => {
         }, 2000)
         return
     }
-
 
     if (userState.userConected) {
         done.value = !done.value
@@ -71,7 +70,5 @@ defineExpose({
     handleCartshopFunction
 })
 </script>
-
-
 
 <style scoped lang="scss" src="./shopcart.scss" />

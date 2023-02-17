@@ -7,14 +7,14 @@
       <span class="price">{{ price }}</span>
 
       <button @click="pushAction.pushObject(product)">Pegar produto</button>
-
+      <RouterLink :to="`/product/${product.id}`" >Pagina do produto</RouterLink>
     </div>
 </template>
 
 <script setup>
 import { mapActions, storeToRefs } from 'pinia';
 import { userShopCart } from '@/stores/UserCartStore'
-
+import { RouterLink } from 'vue-router';
 
 const props = defineProps({
   product: Object

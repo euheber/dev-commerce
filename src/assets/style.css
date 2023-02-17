@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 html,
 body,
 div,
@@ -78,16 +77,17 @@ main {
 body {
   line-height: 1;
   background-color: #212121;
+  overflow: auto !important;
 }
 
 body::-webkit-scrollbar {
-   width: 2px;
- }
+  width: 2px;
+}
 
- body::-webkit-scrollbar-thumb {
-   background: #ffb703; 
-   border-radius: 10px;
- }
+body::-webkit-scrollbar-thumb {
+  background: #ffb703;
+  border-radius: 10px;
+}
 
 ol,
 ul {

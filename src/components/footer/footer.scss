@@ -1,1 +1,33 @@
 @import "../../assets/scss/global";
+
+footer {
+  background-color: $primary;
+  padding: 20px;
+  
+  .warrapFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    h2 {
+      font-size: 2rem;
+      font-family: $anton;
+    }
+    .warrapLinks {
+      font-family: $ubuntu;
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+      }
+      ul {
+        display: grid;
+        gap: 5px;
+        li {
+          font-size: 1rem;
+          &:hover{
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

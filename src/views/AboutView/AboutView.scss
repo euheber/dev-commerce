@@ -1,5 +1,6 @@
 @import "../../assets/scss/global";
 .aboutContainer {
+  height: calc(100vh - 331px);
   display: grid;
   grid-template-columns: 1fr 2fr;
 

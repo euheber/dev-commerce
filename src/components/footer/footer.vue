@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="container">
+        <div class="container warrapFooter">
             <h2>Devcommerce</h2>
             <div class="warrapLinks">
                 <h3>

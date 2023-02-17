@@ -3,7 +3,7 @@
     <nav class="container">
       <div class="choose-category">
         <h1>
-          <RouterLink to="/">devcommerce</RouterLink>
+          <RouterLink to="/">Devcommerce</RouterLink>
         </h1>
         <ul>
           <li>

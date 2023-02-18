@@ -22,11 +22,17 @@
         </div>
 
         <MenuButton v-if="userState.userConected" />
-        <button class="icon" @click="callModal"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="shoppingCart" title='Shopping Cart' @click="callModal">
+          <ShoppingCart />
+          <span v-if="notificationIcon" :class="{ numberItens: notificationIcon }">{{
+            cartShop.length
+          }}</span>
+        </div>
       </div>
     </nav>
     <shopCart ref="openCartShop" />
-</header>
+  </header>
 </template>
 <script setup>
 

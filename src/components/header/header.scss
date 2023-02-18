@@ -26,6 +26,7 @@ header {
       align-items: center;
       max-width: 600px;
       gap: 2rem;
+      
       h1 {
         a {
           font-size: 2rem;
@@ -36,6 +37,9 @@ header {
       ul {
         display: flex;
         gap: 1rem;
+        @media screen and (max-width: 425px) {
+          display: none;
+        }
       }
     }
     .warrapButtons {
@@ -70,11 +74,11 @@ header {
   }
 }
 
-.icon{
+.icon {
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
-  transition: .5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
   &:hover {
     scale: 1.1;

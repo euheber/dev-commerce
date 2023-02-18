@@ -3,13 +3,16 @@
 footer {
   background-color: $primary;
   padding: 20px;
-  
+
   .warrapFooter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     h2 {
       font-size: 2rem;
       font-family: $anton;
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
     }
     .warrapLinks {
       font-family: $ubuntu;
@@ -22,7 +25,7 @@ footer {
         gap: 5px;
         li {
           font-size: 1rem;
-          &:hover{
+          &:hover {
             color: white;
             cursor: pointer;
           }

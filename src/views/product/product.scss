@@ -1,5 +1,45 @@
 @import '../../assets/scss/global';
 
-p{
-    color: $primary;
+*{
+    color: $primary-text-white;
 }
+
+
+main{
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+}
+
+.img-container{ 
+
+    img{
+        width: 450px;
+    }
+}
+
+.product-info{ 
+    min-height: 300px;
+    margin-left: 2rem;
+    align-self: flex-start;
+    h1{ 
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        font-family: $PTSerif;
+    }
+
+    p{
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        font-family: $ubuntu;
+    }
+
+    span{ 
+        font-size: 2rem;
+        font-family: $anton;
+    }
+}
+
+

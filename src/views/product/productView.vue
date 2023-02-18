@@ -1,17 +1,31 @@
 <template>
   <main v-if="product">
-    <section >
-      <p>
-        {{ product.title }}
-      </p>
+    <section class="img-container">
       <img :src="product.image" alt="Teste">
+    </section>
+
+    <section class="product-info">
+        <h1>{{ product.title }}</h1>
+
+        <p>
+          {{ product.description }}
+        </p>
+
+        <span>
+          ${{ product.price }}
+        </span>
+         <button class="add-to-cart-btn"> <ShoppingCart @click="pushAction.pushObject(product)"/> </button>
     </section>
   </main>
 </template>
 
 <script setup>
+import ShoppingCart from '../../assets/SVG/ShoppingCart.vue'
 import { useRoute } from 'vue-router';
 import { ref, onMounted } from 'vue';
+import { userShopCart } from '@/stores/UserCartStore'
+
+const pushAction = userShopCart()
 
 const route = useRoute()
 const id = route.params

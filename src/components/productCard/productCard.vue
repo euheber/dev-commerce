@@ -1,18 +1,17 @@
 <template>
-    <div class="card">
-      <div class="image">
-        <img :src="product.image" alt="">
-      </div>
-      <h2 class="title"> {{ title }}</h2>
-      <span class="price">{{ price }}</span>
+  <div class="card">
+    <RouterLink :to="`/product/${product.id}`">
+      <img :src="product.image" alt="">
+      <h2> {{ title }}</h2>
+      <span>{{ price }}</span>
+    </RouterLink>
+    <button @click="pushAction.pushObject(product)">Add cart</button>
 
-      <button @click="pushAction.pushObject(product)">Pegar produto</button>
-      <RouterLink :to="`/product/${product.id}`">Pagina do produto</RouterLink>
-    </div>
+  </div>
 </template>
 
 <script setup>
-import { mapActions, storeToRefs } from 'pinia';
+import { storeToRefs } from 'pinia';
 import { userShopCart } from '@/stores/UserCartStore'
 import { RouterLink } from 'vue-router';
 
@@ -21,9 +20,9 @@ const props = defineProps({
 })
 
 const title = props.product.title.split(" ").slice(0, 3).join(" ")
-const price = props.product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) 
+const price = props.product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 
-const {cartShop} = storeToRefs()
+const { cartShop } = storeToRefs()
 const pushAction = userShopCart()
 
 </script>

@@ -11,7 +11,6 @@
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia';
 import { userShopCart } from '@/stores/UserCartStore'
 import { RouterLink } from 'vue-router';
 
@@ -22,7 +21,6 @@ const props = defineProps({
 const title = props.product.title.split(" ").slice(0, 3).join(" ")
 const price = props.product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 
-const { cartShop } = storeToRefs()
 const pushAction = userShopCart()
 
 </script>

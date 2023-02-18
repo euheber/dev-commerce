@@ -1,11 +1,11 @@
 <template>
     <main>
         <div class="container">
-            <div class="btns">
-                <button @click="handleProductDisplay('mens')" class="filterBtn">Homem</button>
-                <button @click="handleProductDisplay('womens')" class="filterBtn">Mulher</button>
-                <button @click="handleProductDisplay('jewelery')" class="filterBtn">Jóias</button>
-                <button @click="handleProductDisplay('electronics')" class="filterBtn">Eletrônicos</button>
+            <div class="containerButtons">
+                <button @click="handleProductDisplay('mens')">Homem</button>
+                <button @click="handleProductDisplay('womens')">Mulher</button>
+                <button @click="handleProductDisplay('jewelery')">Jóias</button>
+                <button @click="handleProductDisplay('electronics')">Eletrônicos</button>
             </div>
 
             <section class="products">

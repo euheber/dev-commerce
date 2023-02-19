@@ -1,5 +1,6 @@
 <template>
     <main>
+        <swiper />
         <div class="container">
             <div class="containerButtons">
                 <button @click="handleProductDisplay('mens')">Homem</button>
@@ -13,15 +14,16 @@
                     :class="product.category.replace(`'`, '')" />
             </section>
         </div>
-
-</main>
+    </main>
 </template>
 
 <script setup>
 
-import { onMounted } from 'vue';
 import productCard from '../../components/productCard/productCard.vue';
+import swiper from '../../components/swiper/swiper.vue';
+import { onMounted } from 'vue';
 import { ref } from 'vue';
+
 
 let products = ref('')
 

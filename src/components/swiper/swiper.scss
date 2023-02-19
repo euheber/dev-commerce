@@ -1,0 +1,12 @@
+ @import '../../assets/scss/global';
+
+ p{
+    color: $primary-text-white;
+ }
+
+ .teste{
+    border: 1px solid red;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+ }

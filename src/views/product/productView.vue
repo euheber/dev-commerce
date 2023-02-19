@@ -23,7 +23,7 @@
 import ShoppingCart from '../../assets/SVG/ShoppingCart.vue'
 import { useRoute } from 'vue-router';
 import { ref, onMounted } from 'vue';
-import { userShopCart } from '@/stores/UserCartStore'
+import { userShopCart } from '../../stores/UserCartStore'
 
 const pushAction = userShopCart()
 

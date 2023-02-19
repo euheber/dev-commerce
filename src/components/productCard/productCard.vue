@@ -11,7 +11,8 @@
 </template>
 
 <script setup>
-import { userShopCart } from '@/stores/UserCartStore'
+import { userShopCart } from '../../stores/UserCartStore'
+
 import { RouterLink } from 'vue-router';
 
 const props = defineProps({

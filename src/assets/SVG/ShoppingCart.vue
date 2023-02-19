@@ -11,7 +11,6 @@
     width: 35px;
 }
 
-
 .add-to-cart-btn{
     background-color: transparent;
     border: none;

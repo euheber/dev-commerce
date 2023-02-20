@@ -16,6 +16,12 @@
         <swiper-slide class="swiper">
            <img src="swiper/jewelery.png" alt="teste">
         </swiper-slide>
+        <swiper-slide class="swiper">
+           <img src="swiper/jewelery.png" alt="teste">
+        </swiper-slide>
+        <swiper-slide class="swiper">
+           <img src="swiper/jewelery.png" alt="teste">
+        </swiper-slide>
     </swiper-container>
   </section>
 </template>

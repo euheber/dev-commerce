@@ -2,10 +2,10 @@
     <aside v-show="handleCartshop">
         <section class="cart-header">
             <div class="price-box">
-                <h2><i class="fa-solid fa-money-check-dollar"></i>${{ Math.abs(chamarFunction.total.toFixed(2)) }}</h2>
+                <h2><i class="fa-solid fa-money-check-dollar"></i> ${{ Math.abs(chamarFunction.total.toFixed(2)) }}</h2>
             </div>
 
-            <button @click="handleCartshopFunction">Fechar</button>
+            <button @click="handleCartshopFunction" class="closeBtn"><i class="fa-solid fa-circle-xmark"></i></button>
         </section>
 
         <section class="products-list">
@@ -13,11 +13,36 @@
         </section>
 
 
-        <span v-if="signIn">You must be loged in to buy it</span> <br>
 
-        <span v-if="done">Done!</span>
-        <span v-if="emptyCartShop">Seu carrinho está vazio</span>
-        <button @click="buyNow" class="checkInBtn">Buy now <i class="fa-solid fa-basket-shopping"></i></button>
+        <section class="checkInContainer">
+            <button @click="buyNow" class="checkInBtn">Buy now <i class="fa-solid fa-basket-shopping"></i></button>
+            <Transition enter-active-class="animate__animated animate__fadeIn"
+                leave-active-class="animate__animated animate__fadeOut" mode="out-in">
+
+                <span v-show="signIn">
+                    You must be loged in to buy it
+                </span>
+            </Transition>
+
+
+            <Transition enter-active-class="animate__animated animate__fadeIn"
+                leave-active-class="animate__animated animate__fadeOut" mode="out-in">
+
+                <span v-show="done">
+                    Done!
+                </span>
+            </Transition>
+
+            <Transition enter-active-class="animate__animated animate__fadeIn"
+                leave-active-class="animate__animated animate__fadeOut" mode="out-in">
+                <span v-show="emptyCartShop">
+                    Your  cart shopping is empty
+                </span>
+            </Transition>
+
+        </section>
+
+
     </aside>
 </template>
 

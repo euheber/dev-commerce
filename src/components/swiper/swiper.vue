@@ -1,38 +1,30 @@
 <template>
-    <swiper-container>
-        <swiper-slide>
-            <p>Paragrafo 1</p>
+  <section class="swiper-container">
+    <swiper-container   :slidesPerView="3"
+    :spaceBetween="30"
+    :freeMode="true"
+    :pagination="{
+      clickable: true,
+    }"
+    class="mySwiper">
+        <swiper-slide class="swiper">
+           <img src="swiper/woman.png" alt="">
         </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 2</p>
+        <swiper-slide class="swiper">
+           <img src="swiper/man.png" alt="">
         </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 3</p>
-        </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 4</p>
-        </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 5</p>
-        </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 6</p>
-        </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 7</p>
-        </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 8</p>
-        </swiper-slide>
-        <swiper-slide>
-            <p>Paragrafo 9</p>
+        <swiper-slide class="swiper">
+           <img src="swiper/jewelery.png" alt="teste">
         </swiper-slide>
     </swiper-container>
+  </section>
 </template>
 
 <script setup>
 import { register } from 'swiper/element/bundle';
+import 'swiper/scss';
 register()
+
 </script>
 
 <style lang="scss" scoped src="./swiper.scss"/>

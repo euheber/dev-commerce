@@ -31,7 +31,10 @@
         </div>
       </div>
     </nav>
-    <shopCart ref="openCartShop" />
+    <Transition >
+      <shopCart ref="openCartShop" />
+
+    </Transition>
   </header>
 </template>
 <script setup>

@@ -1,13 +1,14 @@
+@use "../../assets/scss/global";
 @import "../../assets/scss/global";
 
 aside {
   position: fixed;
   right: 0;
   top: 0;
-  width: 30%;
   height: 100%;
   z-index: 99;
   background-color: $primary;
+  padding: 1rem;
 }
 
 .cart-header {
@@ -15,6 +16,7 @@ aside {
   padding-inline: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .price-box {
     h2 {
       font-size: 1.5rem;
@@ -24,27 +26,55 @@ aside {
 }
 
 .products-list {
-  margin: 3rem auto 0 auto;
-  height: 550px;
-  width: 450px;
+  margin: 0 auto;
+  height: 450px;
+  width: 400px;
   padding: 1rem;
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto;
- border-radius: 7px;
+  border-radius: 7px;
 
- &::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     width: 2px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $primary-text-black; 
+    background: $primary-text-black;
     border-radius: 10px;
+  }
+
+  @media (max-width: 426px) {
+    height: 350px;
   }
 }
 
-.checkInBtn{
-  border: 1px solid red;
+.checkInBtn {
   margin: 0 auto;
   display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
 }
+
+.closeBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.5s ease;
+
+  @include hoverBtn;
+}
+
+
+.checkInContainer{
+  text-align: center;
+  @media(max-width: 426px){
+    margin-top: 1rem;
+  }
+}
+
+

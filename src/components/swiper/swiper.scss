@@ -1,12 +1,26 @@
- @import '../../assets/scss/global';
+@import "../../assets/scss/global";
 
- p{
-    color: $primary-text-white;
- }
+* {
+  color: $primary-text-white;
+}
 
- .teste{
-    border: 1px solid red;
-    max-width: 1400px;
-    display: flex;
-    justify-content: center;
- }
+.mySwiper {
+  // min-height: 500px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  p{
+    text-align: center;
+  }
+}
+
+.swiper{
+  text-align: center;
+  img{
+    max-width: 100%;
+    height: 300px;
+  };
+}
+
+

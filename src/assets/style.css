@@ -77,7 +77,6 @@ main {
 body {
   line-height: 1;
   background-color: #212121;
-  overflow: auto !important;
 }
 
 body::-webkit-scrollbar {

@@ -43,3 +43,21 @@ $ubuntu: "Ubuntu", sans-serif;
   max-width: 1300px;
   margin: 0 auto;
 }
+//entrance animation
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: anime 0.5s forwards;
+}
+.animeRight {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: anime 0.5s forwards;
+}
+@keyframes anime {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}

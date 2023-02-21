@@ -1,8 +1,8 @@
 <template>
     <section>
         <div class="container aboutContainer">
-            <AboutIllustration />
-            <div class="about">
+            <AboutIllustration class="animeLeft"/>
+            <div class="about animeRight">
                 <h1>About us</h1>
                 <br>
                 <p>Welcome to Devcommerce, your e-commerce of assorted products! Here you will find everything you need in

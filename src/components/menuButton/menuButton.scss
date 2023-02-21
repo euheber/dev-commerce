@@ -7,18 +7,14 @@
   background-color: $primary;
   position: absolute;
   opacity: 0;
-  z-index: 2;
   pointer-events: none;
-  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
-    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
-
-  
+  transition: 0.2s, 0.2s ease-in-out opacity, 0.2s transform;
 }
 
 .menu {
   position: relative;
   cursor: pointer;
-  
+
   &.open {
     .button {
       opacity: 1;
@@ -26,19 +22,18 @@
       border: 1px solid black;
 
       &:first-of-type {
-        right: -10px;
-        bottom: -120px;
-        transition-delay: 0.10s;
-        &:hover{
+        right: 20px;
+        bottom: -60px;
+        &:hover {
           scale: 0.9;
         }
       }
 
       &:nth-of-type(2) {
         bottom: -60px;
-        left: -10px;
+        left: 20px;
         right: auto;
-        &:hover{
+        &:hover {
           scale: 0.9;
         }
       }

@@ -1,14 +1,14 @@
 <template>
     <main>
         <div class="container">
-            <div class="containerButtons">
+            <div class="containerButtons animeLeft">
                 <button @click="handleProductDisplay('mens')">Homem</button>
                 <button @click="handleProductDisplay('womens')">Mulher</button>
                 <button @click="handleProductDisplay('jewelery')">Jóias</button>
                 <button @click="handleProductDisplay('electronics')">Eletrônicos</button>
             </div>
 
-            <section class="products">
+            <section class="products animeLeft">
                 <productCard v-for="product in products" :key="product.id" :product="product"
                     :class="product.category.replace(`'`, '')" />
             </section>

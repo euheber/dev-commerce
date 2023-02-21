@@ -1,11 +1,11 @@
 <template>
   <section v-if="product">
     <div class="product container">
-      <aside class="img-container">
+      <aside class="img-container animeLeft">
         <img :src="product.image" alt="Teste">
       </aside>
 
-      <aside class="product-info">
+      <aside class="product-info animeRight">
         <h1>{{ product.title }}</h1>
 
         <p>

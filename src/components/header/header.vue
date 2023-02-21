@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="container">
-      <div class="choose-category">
+      <div class="choose-category animeLeft">
         <h1>
           <RouterLink to="/">Devcommerce</RouterLink>
         </h1>
@@ -15,7 +15,7 @@
         </ul>
       </div>
 
-      <div class="warrapButtons">
+      <div class="warrapButtons animeRight">
         <div v-if="!userState.userConected" class="warrapLinks">
           <RouterLink to="/login">Sign in</RouterLink>
           <RouterLink to="/signup">Sign up</RouterLink>

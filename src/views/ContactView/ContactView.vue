@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container containerContact">
-            <form @submit.prevent>
+            <form @submit.prevent class="animeLeft">
                 <div class="card">
                     <h1 class="singup">Contact</h1>
 
@@ -24,7 +24,7 @@
 
                 </div>
             </form>
-            <div class="illustration">
+            <div class="illustration animeRight">
                 <ContactIllustration />
             </div>
         </div>

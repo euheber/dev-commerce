@@ -1,5 +1,5 @@
 <template>
-    <aside v-show="handleCartshop">
+    <aside v-show="handleCartshop" class="animeRight">
         <section class="cart-header">
             <div class="price-box">
                 <h2><i class="fa-solid fa-money-check-dollar"></i> ${{ Math.abs(useStoreFunction.total.toFixed(2)) }}</h2>

@@ -1,6 +1,5 @@
 <template>
     <main>
-        <swiper />
         <div class="container">
             <div class="containerButtons">
                 <button @click="handleProductDisplay('mens')">Homem</button>

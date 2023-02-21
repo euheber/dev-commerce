@@ -2,14 +2,14 @@
     <aside v-show="handleCartshop">
         <section class="cart-header">
             <div class="price-box">
-                <h2><i class="fa-solid fa-money-check-dollar"></i> ${{ Math.abs(chamarFunction.total.toFixed(2)) }}</h2>
+                <h2><i class="fa-solid fa-money-check-dollar"></i> ${{ Math.abs(useStoreFunction.total.toFixed(2)) }}</h2>
             </div>
 
             <button @click="handleCartshopFunction" class="closeBtn"><i class="fa-solid fa-circle-xmark"></i></button>
         </section>
 
         <section class="products-list">
-            <productsInCart v-for="product in chamarFunction.cartShop" :key="product.id" :product="product" />
+            <productsInCart v-for="product in useStoreFunction.cartShop" :key="product.id" :product="product" />
         </section>
 
 
@@ -39,7 +39,6 @@
                     Your  cart shopping is empty
                 </span>
             </Transition>
-
         </section>
 
 
@@ -53,7 +52,7 @@ import { useUserStateStore } from '../../stores/UserStateStore';
 import { ref } from 'vue';
 
 const userState = useUserStateStore()
-const chamarFunction = userShopCart()
+const useStoreFunction = userShopCart()
 const body = document.querySelector('body')
 
 let handleCartshop = ref(false)
@@ -63,11 +62,10 @@ let emptyCartShop = ref(false)
 
 const handleCartshopFunction = () => {
     handleCartshop.value = !handleCartshop.value
-    handleCartshop.value ? body.style.overflow = 'hidden' : body.style.overflow = 'scroll'
 }
 
 const buyNow = () => {
-    if (userState.userConected & chamarFunction.cartShop.length === 0) {
+    if (userState.userConected && useStoreFunction.cartShop.length === 0) {
         emptyCartShop.value = !emptyCartShop.value
         setTimeout(() => {
             emptyCartShop.value = !emptyCartShop.value
@@ -80,7 +78,7 @@ const buyNow = () => {
         setTimeout(() => {
             done.value = !done.value
         }, 2000)
-        chamarFunction.clean()
+        useStoreFunction.clean()
         return
     }
 

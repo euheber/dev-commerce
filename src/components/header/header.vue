@@ -40,13 +40,13 @@
 <script setup>
 
 
-import ShoppingCart from '../../assets/SVG/ShoppingCart.vue'
-import { RouterLink } from 'vue-router';
 import { onMounted, ref, watch } from 'vue';
-import shopCart from '../shopcart/shopcart.vue'
-import MenuButton from '../menuButton/menuButton.vue';
 import { useUserStateStore } from '../../stores/UserStateStore';
 import { userShopCart } from '../../stores/UserCartStore';
+import { RouterLink } from 'vue-router';
+import ShoppingCart from '../../assets/SVG/ShoppingCart.vue'
+import shopCart from '../shopcart/shopcart.vue'
+import MenuButton from '../menuButton/menuButton.vue';
 
 const { cartShop } = userShopCart();
 const userState = useUserStateStore();
@@ -61,7 +61,6 @@ watch(cartShop, (newValue) => {
   notificationIcon.value = newValue.length > 0;
   localStorage.setItem("notification", notificationIcon.value);
 });
-
 
 
 const callModal = () => {

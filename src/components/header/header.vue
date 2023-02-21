@@ -21,14 +21,15 @@
           <RouterLink to="/signup">Sign up</RouterLink>
         </div>
 
-        <MenuButton v-if="userState.userConected" />
-
         <div class="shoppingCart" title='Shopping Cart' @click="callModal">
           <ShoppingCart />
           <span v-if="notificationIcon" :class="{ numberItens: notificationIcon }">{{
             cartShop.length
           }}</span>
         </div>
+        
+        <MenuButton v-if="userState.userConected" />
+
       </div>
     </nav>
     <Transition >

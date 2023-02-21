@@ -2,7 +2,7 @@
   <div class="product">
     <div class="price-img">
             <div class="img">
-               <img :src="product.image" alt="">
+               <img :src="product.image" alt="image of a product">
             </div>
 
             <div class="price">

@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <RouterLink :to="`/product/${product.id}`">
-      <img :src="product.image" alt="">
+      <img :src="product.image" alt="image of a product">
       <h2> {{ title }}</h2>
       <span>{{ price }}</span>
     </RouterLink>

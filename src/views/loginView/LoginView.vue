@@ -2,7 +2,7 @@
   <section>
 
     <div class="warrap container">
-      <div>
+      <div class="illustration">
         <BackgroundLogin />
       </div>
 

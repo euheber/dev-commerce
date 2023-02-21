@@ -31,13 +31,14 @@ $ubuntu: "Ubuntu", sans-serif;
   }
 }
 
-@mixin hoverBtn { 
-  &:hover{ 
+@mixin hoverBtn {
+  &:hover {
     color: $primary-text-white;
     rotate: 90deg;
   }
 }
 // container class
+
 .container {
   max-width: 1300px;
   margin: 0 auto;

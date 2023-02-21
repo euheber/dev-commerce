@@ -1,12 +1,17 @@
 @import "../../assets/scss/global";
 .singupContainer {
-  height: calc(100vh - 286px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
   justify-items: center;
   align-items: center;
   font-family: $ubuntu;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+    .illustration {
+      display: none;
+    }
+  }
 }
 .singup {
   color: #000;

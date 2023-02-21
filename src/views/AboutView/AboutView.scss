@@ -1,6 +1,6 @@
 @import "../../assets/scss/global";
+
 .aboutContainer {
-  height: calc(100vh - 331px);
   display: grid;
   grid-template-columns: 1fr 2fr;
 
@@ -8,8 +8,13 @@
   background-color: $primary;
   border-radius: 20px;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+    > svg {
+      display: none;
+    }
+  }
 }
 .about {
   padding: 20px;

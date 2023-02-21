@@ -3,10 +3,15 @@
 footer {
   background-color: $primary;
   padding: 20px;
+  margin-top: auto;
 
   .warrapFooter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width: 425px) {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
     h2 {
       font-size: 2rem;
       font-family: $anton;

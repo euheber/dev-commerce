@@ -1,11 +1,17 @@
 @import "../../assets/scss/global";
 section {
   .containerContact {
-    height: calc(100vh - 286px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     font-family: $ubuntu;
+    padding: 20px;
+    @media screen and (max-width: 425px) {
+      grid-template-columns: 1fr;
+      .illustration {
+        display: none;
+      }
+    }
     .singup {
       color: #000;
       text-transform: uppercase;
@@ -27,6 +33,9 @@ section {
       border-radius: 15px;
       background-color: $primary;
       border-radius: 8px;
+      @media screen and (max-width: 425px){
+        width: 100%;
+      }
     }
 
     .inputBox,
@@ -117,6 +126,5 @@ section {
         color: white;
       }
     }
-
   }
 }

@@ -1,7 +1,7 @@
 <template >
     <section>
         <div class="singupContainer container">
-            <div>
+            <div class="illustration">
                 <BackgroundSignup />
             </div>
             <form @submit.prevent>
@@ -29,7 +29,7 @@
 
             </form>
         </div>
-</section>
+    </section>
 </template>
 <script setup>
 

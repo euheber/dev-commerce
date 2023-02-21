@@ -24,7 +24,7 @@
 
                 </div>
             </form>
-            <div>
+            <div class="illustration">
                 <ContactIllustration />
             </div>
         </div>

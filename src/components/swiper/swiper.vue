@@ -1,6 +1,6 @@
 <template>
   <section class="swiper-container">
-    <swiper-container   :slidesPerView="3"
+    <swiper-container   :slidesPerView="1"
     :spaceBetween="30"
     :freeMode="true"
     :pagination="{
@@ -8,19 +8,10 @@
     }"
     class="mySwiper">
         <swiper-slide class="swiper">
-           <img src="swiper/woman.png" alt="">
+           <img src="swiper/banner.jpg" alt="">
         </swiper-slide>
         <swiper-slide class="swiper">
-           <img src="swiper/man.png" alt="">
-        </swiper-slide>
-        <swiper-slide class="swiper">
-           <img src="swiper/jewelery.png" alt="teste">
-        </swiper-slide>
-        <swiper-slide class="swiper">
-           <img src="swiper/jewelery.png" alt="teste">
-        </swiper-slide>
-        <swiper-slide class="swiper">
-           <img src="swiper/jewelery.png" alt="teste">
+           <img src="swiper/banner2.jpg" alt="">
         </swiper-slide>
     </swiper-container>
   </section>
@@ -29,6 +20,8 @@
 <script setup>
 import { register } from 'swiper/element/bundle';
 import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 register()
 
 </script>

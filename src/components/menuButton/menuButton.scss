@@ -9,6 +9,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.2s, 0.2s ease-in-out opacity, 0.2s transform;
+
 }
 
 .menu {
@@ -20,7 +21,6 @@
       opacity: 1;
       pointer-events: auto;
       border: 1px solid black;
-
       &:first-of-type {
         right: 20px;
         bottom: -60px;

@@ -10,6 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1300px;
     a {
       text-decoration: none;
       color: black;
@@ -26,7 +27,7 @@ header {
       align-items: center;
       max-width: 600px;
       gap: 2rem;
-      
+
       h1 {
         a {
           font-size: 2rem;
@@ -37,6 +38,7 @@ header {
       ul {
         display: flex;
         gap: 1rem;
+        
         @media screen and (max-width: 425px) {
           display: none;
         }
@@ -46,10 +48,11 @@ header {
       display: flex;
       gap: 1rem;
       align-items: center;
-
+      margin-right: 2rem;
       .warrapLinks {
         display: inline-flex;
         gap: 1rem;
+
       }
 
       .shoppingCart {

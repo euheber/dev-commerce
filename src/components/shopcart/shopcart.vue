@@ -40,8 +40,6 @@
                 </span>
             </Transition>
         </section>
-
-
     </aside>
 </template>
 

@@ -27,15 +27,12 @@
             cartShop.length
           }}</span>
         </div>
-        
+
         <MenuButton v-if="userState.userConected" />
 
       </div>
     </nav>
-    <Transition >
       <shopCart ref="openCartShop" />
-
-    </Transition>
   </header>
 </template>
 <script setup>

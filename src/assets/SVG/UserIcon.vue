@@ -10,5 +10,6 @@
 .userIcon {
     width: 35px;
     cursor: pointer;
+
 }
 </style>

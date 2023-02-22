@@ -12,13 +12,17 @@
           {{ product.description }}
         </p>
 
-        <span>
-          ${{ product.price }}
-        </span>
-        <button class="add-to-cart-btn">
-          <ShoppingCart @click="pushAction.pushObject(product)" />
-          Buy now
-        </button>
+
+
+        <div class="add-to-cart-container">
+          <span>
+            ${{ product.price }}
+          </span>
+          <button class="add-to-cart-btn" @click="pushAction.pushObject(product)">
+            <ShoppingCart/>
+            Buy now
+          </button>
+        </div>
       </aside>
     </div>
   </section>

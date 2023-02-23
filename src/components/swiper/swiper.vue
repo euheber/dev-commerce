@@ -13,6 +13,9 @@
         <swiper-slide class="swiper">
            <img src="swiper/banner2.jpg" alt="">
         </swiper-slide>
+        <swiper-slide class="swiper">
+           <img src="swiper/banner3.jpg" alt="">
+        </swiper-slide>
     </swiper-container>
   </section>
 </template>

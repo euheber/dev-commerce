@@ -30,9 +30,14 @@ footer {
         gap: 5px;
         li {
           font-size: 1rem;
-          &:hover {
-            color: white;
-            cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              color: white;
+              cursor: pointer;
+            }
           }
         }
       }

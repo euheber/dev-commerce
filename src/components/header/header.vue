@@ -23,8 +23,8 @@
 
         <div class="shoppingCart" title='Shopping Cart' @click="callModal">
           <ShoppingCart />
-          <span v-if="notificationIcon" :class="{ numberItens: notificationIcon }">{{
-            cartShop.length
+          <span v-if="notificationIcon && userCartStore.cartShop.length > 0" :class="{ numberItens: notificationIcon }">{{
+            userCartStore.cartShop.length
           }}</span>
         </div>
 
@@ -32,7 +32,7 @@
 
       </div>
     </nav>
-      <shopCart ref="openCartShop" />
+    <shopCart ref="openCartShop" />
   </header>
 </template>
 <script setup>
@@ -46,7 +46,7 @@ import ShoppingCart from '../../assets/SVG/ShoppingCart.vue'
 import shopCart from '../shopcart/shopcart.vue'
 import MenuButton from '../menuButton/menuButton.vue';
 
-const { cartShop } = userShopCart();
+const userCartStore = userShopCart();
 const userState = useUserStateStore();
 
 const storedUserState = localStorage.getItem("userSate");
@@ -55,9 +55,11 @@ const openCartShop = ref()
 const notificationIcon = ref(false);
 
 
-watch(cartShop, (newValue) => {
+watch(userCartStore.cartShop, (newValue) => {
+  console.log(newValue.length)
   notificationIcon.value = newValue.length > 0;
   localStorage.setItem("notification", notificationIcon.value);
+  console.log(newValue.length)
 });
 
 
@@ -69,8 +71,8 @@ onMounted(() => {
   if (storedUserState === 'true') {
     userState.LOGIN();
   }
-  if (cartShop.length > 0) {
-    notificationIcon.value = localStorage.getItem("notification") === "true";
+  if (userCartStore.cartShop.length > 0) {
+    notificationIcon.value = localStorage.getItem("notification") === "true" ? true : false;
   }
 })
 

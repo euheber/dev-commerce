@@ -4,10 +4,10 @@
         <swiper />
         <div class="container">
             <div class="containerButtons animeLeft">
-                <button @click="handleProductDisplay('mens')">Homem</button>
-                <button @click="handleProductDisplay('womens')">Mulher</button>
-                <button @click="handleProductDisplay('jewelery')">Jóias</button>
-                <button @click="handleProductDisplay('electronics')">Eletrônicos</button>
+                <button @click="handleProductDisplay('mens')">Man</button>
+                <button @click="handleProductDisplay('womens')">Woman</button>
+                <button @click="handleProductDisplay('jewelery')">jewelry</button>
+                <button @click="handleProductDisplay('electronics')">electronics</button>
             </div>
 
             <section class="products animeLeft">
@@ -33,6 +33,8 @@ onMounted(async () => {
         .then(response => response.json())
         .then(product => products.value = product)
 })
+
+
 
 const handleProductDisplay = (category) => {
     const allCards = document.querySelectorAll(`.card`)

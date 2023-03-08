@@ -1,29 +1,21 @@
-# dev-commerce
+<h1 align="center">
+  devcommerce
+</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center">
+  <img src=".github/preview.png" width="100%" />
+</p>
 
-## Recommended IDE Setup
+## 💻 Projeto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Esse projeto é um e-commerce feito em conjunto com o [Clinton Rocha ](https://github.com/Clintonrocha98). 
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## 🚀 Tecnologias
 
-## Project Setup
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [SASS](https://sass-lang.com/)
+- [Vue JS](https://vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## 📝 Requisitos do desafio

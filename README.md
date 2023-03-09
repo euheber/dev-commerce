@@ -10,10 +10,10 @@
 
 Esse projeto é um e-commerce feito em conjunto com o [Clinton Rocha ](https://github.com/Clintonrocha98). Nele usamos a api [Fakestore](https://fakestoreapi.com/) para pegar os produtos disponíveis na vitrine. As features implementadas nesse projeto são: 
 
-- [] Login do usuario
-- [] Adicioanar produto ao carrinho
-- [] Finalizar a compra só é possível quando o usuário está logado. 
-- [] Controle da quantidade de determinado produto no carrinho
+-  Login do usuario
+-  Adicioanar produto ao carrinho
+-  Finalizar a compra só é possível quando o usuário está logado. 
+-  Controle da quantidade de determinado produto no carrinho
 
 
 ## 🚀 Tecnologias

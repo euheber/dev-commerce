@@ -1,5 +1,5 @@
 <h1 align="center">
-  devcommerce
+  Devcommerce
 </h1>
 
 ## 💻 Projeto
@@ -22,12 +22,35 @@ Esse projeto é um e-commerce feito em conjunto com o [Clinton Rocha ](https://g
 
 ## 🚀 Tecnologias
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [SASS](https://sass-lang.com/)
 - [Vue JS](https://vuejs.org/)
+- [Vue Router](https://router.vuejs.org)
 - [Pinia](https://pinia.vuejs.org/)
+- [SASS](https://sass-lang.com/)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
 
 ## 💻 Como executar o projeto
 
-Caso você queira abrir esse projeto na sua máquina, não esqueça de utilizar o comando npm install dentro do diretório para instalar as depedências do projeto. 
+Para executar o projeto em sua máquina, siga os seguintes passos:
+
+Faça um clone deste repositório em sua máquina:
+
+```
+git clone https://github.com/seu-usuario/devcommerce.git
+```
+
+Acesse o diretório do projeto:
+```
+cd devcommerce
+```
+Instale as dependências do projeto:
+```
+npm install
+```
+
+Acesse o projeto em seu navegador, através do endereço:
+```
+http://localhost:5173/
+```
+
+Lembre-se de que é necessário ter o Node.js e o npm instalados em sua máquina. Se você ainda não os possui, faça o download em [Node](https://nodejs.org/).

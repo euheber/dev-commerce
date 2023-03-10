@@ -28,6 +28,6 @@
 <style lang="scss">
 .ConfigIcon {
     width: 35px;
-    margin: 10px;
+    margin: 5px;
 }
 </style>

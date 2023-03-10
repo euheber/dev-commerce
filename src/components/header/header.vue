@@ -56,10 +56,8 @@ const notificationIcon = ref(false);
 
 
 watch(userCartStore.cartShop, (newValue) => {
-  console.log(newValue.length)
   notificationIcon.value = newValue.length > 0;
   localStorage.setItem("notification", notificationIcon.value);
-  console.log(newValue.length)
 });
 
 

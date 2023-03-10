@@ -7,16 +7,21 @@ aside {
   top: 0;
   height: 100%;
   z-index: 99;
+  width: 400px;
   background-color: $primary;
-  padding: 1rem;
+ @media(max-width: 376px){
+  width: 100%
+ }
 }
 
 .cart-header {
   padding-block: 2rem;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
+  gap: 12rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
   .price-box {
     h2 {
       font-size: 1.5rem;
@@ -28,7 +33,6 @@ aside {
 .products-list {
   margin: 0 auto;
   height: 450px;
-  width: 400px;
   padding: 1rem;
   overflow: scroll;
   overflow-x: hidden;
@@ -68,12 +72,9 @@ aside {
   @include hoverBtn;
 }
 
-
-.checkInContainer{
+.checkInContainer {
   text-align: center;
-  @media(max-width: 426px){
+  @media (max-width: 426px) {
     margin-top: 1rem;
   }
 }
-
-

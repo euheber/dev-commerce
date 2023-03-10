@@ -6,6 +6,11 @@
     :pagination="{
       clickable: true,
     }"
+     :autoplay="{
+      delay: 4500,
+    disableOnInteraction: false,
+    }"
+   
     class="mySwiper">
         <swiper-slide class="swiper">
            <img src="/swiper/banner.jpg" alt="">

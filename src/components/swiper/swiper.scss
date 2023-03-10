@@ -4,6 +4,13 @@
   color: $primary-text-white;
 }
 
+
+.swiper-container{
+  @media(max-width: 1000px){ 
+    display: none;
+  }
+}
+
 .mySwiper {
   display: flex;
   justify-content: center;

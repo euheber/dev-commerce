@@ -48,9 +48,15 @@ Instale as dependências do projeto:
 npm install
 ```
 
-Acesse o projeto em seu navegador, através do endereço:
+Para abrir o projeto no navegador utilize o comando: 
 ```
-http://localhost:5173/
+npm run dev
 ```
 
 Lembre-se de que é necessário ter o Node.js e o npm instalados em sua máquina. Se você ainda não os possui, faça o download em [Node](https://nodejs.org/).
+
+## 💻 Crédito das imagens usadas
+
+[bs_k1d](https://www.freepik.com/free-vector/mega-sale-banner-your-online-store-realistic-style-with-phone-map-cart-bag-gift-vector-illustration_21869797.htm?query=e-commerce%20banner).
+[rorozoa](https://www.freepik.com/free-vector/big-sale-banner-template-design_19089891.htm#page=2&query=banner%20shopping&position=49&from_view=keyword&track=ais).
+[Freepik](https://www.freepik.com/free-photo/woman-holding-various-shopping-bags-copy-space_10419007.htm#query=banner%20shopping&position=3&from_view=keyword&track=ais).

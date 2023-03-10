@@ -5,7 +5,7 @@
       <h2> {{ title }}</h2>
       <span>{{ price }}</span>
     </RouterLink>
-    <button @click="pushAction.pushObject(product)">Add cart</button>
+    <button @click="pushAction.pushObject(product)">Add to cart</button>
 
   </div>
 </template>

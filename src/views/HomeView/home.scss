@@ -6,7 +6,9 @@
   gap: 10px;
   margin: 20px 0;
   padding: 0 20px;
-
+  @media screen and (max-width: 425px) {
+    margin-top: 50px;
+  }
   > button {
     background-color: $primary;
     border-radius: 15px;

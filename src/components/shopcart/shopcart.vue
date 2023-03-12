@@ -1,21 +1,21 @@
 <template>
     <aside v-show="handleCartshop">
-        <section class="cart-header">
+        <div class="cart-header">
             <div class="price-box">
-                <h2><i class="fa-solid fa-money-check-dollar"></i> ${{ Math.abs(useStoreFunction.total.toFixed(2)) }}</h2>
+                <h2>Total: ${{ Math.abs(useStoreFunction.total.toFixed(2)) }}</h2>
             </div>
 
-            <button @click="handleCartshopFunction" class="closeBtn"><i class="fa-solid fa-circle-xmark"></i></button>
-        </section>
+            <button @click="handleCartshopFunction" class="closeBtn"><CloseIcon/></button>
+        </div>
 
-        <section class="products-list">
+        <div class="products-list">
             <productsInCart v-for="product in useStoreFunction.cartShop" :key="product.id" :product="product" />
-        </section>
+        </div>
 
 
 
-        <section class="checkInContainer">
-            <button @click="buyNow" class="checkInBtn">Buy now <i class="fa-solid fa-basket-shopping"></i></button>
+        <div class="checkInContainer">
+            <button @click="buyNow" class="checkInBtn"><ShoppingCart />Buy now</button>
             <Transition enter-active-class="animate__animated animate__fadeIn"
                 leave-active-class="animate__animated animate__fadeOut" mode="out-in">
 
@@ -39,15 +39,17 @@
                     Your  cart shopping is empty
                 </span>
             </Transition>
-        </section>
+        </div>
     </aside>
 </template>
 
 <script setup>
 import productsInCart from '../productsInCart/productsInCart.vue';
+import CloseIcon from '../../assets/SVG/CloseIcon.vue'
 import { userShopCart } from '../../stores/UserCartStore';
 import { useUserStateStore } from '../../stores/UserStateStore';
 import { ref } from 'vue';
+import ShoppingCart from '../../assets/SVG/ShoppingCart.vue';
 
 const userState = useUserStateStore()
 const useStoreFunction = userShopCart()

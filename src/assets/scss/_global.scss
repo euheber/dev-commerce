@@ -34,7 +34,6 @@ $ubuntu: "Ubuntu", sans-serif;
 
 @mixin hoverBtn {
   &:hover {
-    color: $primary-text-white;
     rotate: 90deg;
   }
 }

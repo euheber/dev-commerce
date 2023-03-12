@@ -9,7 +9,7 @@ aside {
   z-index: 99;
   width: 400px;
   background-color: $primary;
-  @media (max-width: 376px) {
+  @media (max-width: 425px) {
     width: 100%;
   }
 }
@@ -32,15 +32,12 @@ aside {
 
 .products-list {
   margin: 0 auto;
-  height: 450px;
+  height: 80%;
   padding: 1rem;
   overflow: scroll;
-  overflow-x: hidden;
-  overflow-y: auto;
-  border-radius: 7px;
 
   &::-webkit-scrollbar {
-    width: 2px;
+    width: 5px;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -48,9 +45,6 @@ aside {
     border-radius: 10px;
   }
 
-  @media (max-width: 426px) {
-    height: 350px;
-  }
 }
 
 .checkInBtn {
@@ -74,7 +68,5 @@ aside {
 
 .checkInContainer {
   text-align: center;
-  @media (max-width: 426px) {
-    margin-top: 1rem;
-  }
+  
 }

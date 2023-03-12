@@ -2,19 +2,20 @@
   <div class="card">
     <RouterLink :to="`/product/${product.id}`">
       <img :src="product.image" alt="image of a product">
-      <h2> {{ title }}</h2>
-      <span>{{ price }}</span>
     </RouterLink>
-    <button @click="pushAction.pushObject(product)">Add to cart</button>
+    <div class="warrapTitle">
+      <h2 class="title">{{ title }}</h2>
+      <span class="price">{{ price }}</span>
+    </div>
+    <button @click="pushAction.pushObject(product)"><Addcart/>Add to cart</button>
 
   </div>
 </template>
 
 <script setup>
 import { userShopCart } from '../../stores/UserCartStore'
-
 import { RouterLink } from 'vue-router';
-
+import Addcart from '../../assets/SVG/AddCart.vue'
 const props = defineProps({
   product: Object
 })

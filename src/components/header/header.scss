@@ -32,7 +32,7 @@ header {
         a {
           font-size: 2rem;
           font-family: $anton;
-          @media screen and(max-width: 375px) {
+          @media screen and (max-width: 375px) {
             font-size: 1.5rem;
           }
         }
@@ -41,7 +41,7 @@ header {
       ul {
         display: flex;
         gap: 1rem;
-        
+
         @media screen and (max-width: 425px) {
           display: none;
         }
@@ -54,7 +54,6 @@ header {
       .warrapLinks {
         display: inline-flex;
         gap: 1rem;
-
       }
 
       .shoppingCart {

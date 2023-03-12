@@ -32,6 +32,9 @@ header {
         a {
           font-size: 2rem;
           font-family: $anton;
+          @media screen and(max-width: 375px) {
+            font-size: 1.5rem;
+          }
         }
       }
 

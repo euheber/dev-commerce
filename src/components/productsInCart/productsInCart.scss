@@ -55,19 +55,27 @@
   background-color: transparent;
   height: 25px;
   border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: 0.5s ease;
-  @include hoverBtn;
 }
 
 .icon {
   background-color: transparent;
   border: none;
   font-size: 1rem;
+}
+
+svg.quantity{
+  transition: 0.5s ease;
+  cursor: pointer;
+  &:hover {
+    fill: $primary;
+  }
+  transition: .5s ease;
+}
+
+.removeIcon {
   cursor: pointer;
   transition: 0.5s ease;
-  &:hover {
-    color: $primary;
+  &:hover{ 
+    rotate: 90deg;
   }
 }

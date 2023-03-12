@@ -32,11 +32,6 @@ $ubuntu: "Ubuntu", sans-serif;
   }
 }
 
-@mixin hoverBtn {
-  &:hover {
-    rotate: 90deg;
-  }
-}
 // container class
 
 .container {

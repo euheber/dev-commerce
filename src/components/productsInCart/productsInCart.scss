@@ -35,6 +35,7 @@
 }
 
 .price {
+
   h2,
   span {
     font-family: $ubuntu;
@@ -42,6 +43,12 @@
   span {
     font-size: 0.8rem;
   }
+}
+
+.btns{
+  display: inline-flex;
+  align-items: center;
+  margin-left: .5rem;
 }
 
 .remove-btn {
@@ -61,6 +68,6 @@
   cursor: pointer;
   transition: 0.5s ease;
   &:hover {
-    color: white;
+    color: $primary;
   }
 }

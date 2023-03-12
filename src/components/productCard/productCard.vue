@@ -7,7 +7,7 @@
       <h2 class="title">{{ title }}</h2>
       <span class="price">{{ price }}</span>
     </div>
-    <button @click="pushAction.pushObject(product)"><Addcart/>Add to cart</button>
+    <button @click="pushObject(product)"><Addcart/>Add to cart</button>
 
   </div>
 </template>
@@ -23,7 +23,7 @@ const props = defineProps({
 const title = props.product.title.split(" ").slice(0, 3).join(" ")
 const price = props.product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 
-const pushAction = userShopCart()
+const {pushObject} = userShopCart()
 
 </script>
 

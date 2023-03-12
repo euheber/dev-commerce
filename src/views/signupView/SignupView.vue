@@ -7,7 +7,7 @@
             <form @submit.prevent="validateForm">
 
                 <div class="card">
-                    <a class="singup">Sign Up</a>
+                    <h1>Sign Up</h1>
 
                     <div class="inputBox">
                         <input type="text" v-model="name" />

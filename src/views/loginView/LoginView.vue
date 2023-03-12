@@ -9,9 +9,7 @@
       <form @submit.prevent="validateForm">
 
         <div class="card">
-          <h1 class="login">Log in</h1>
-
-
+          <h1>Log in</h1>
 
           <div class="inputBox">
             <input type="email" v-model="email" />
